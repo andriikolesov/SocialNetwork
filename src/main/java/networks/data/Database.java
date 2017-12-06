@@ -24,7 +24,6 @@ public class Database {
     public static Post[] getAllPosts() {
         Post posts[] = new Post[4];
         final Post post = new Post();
-
         posts[0] = post;
 
         return posts;

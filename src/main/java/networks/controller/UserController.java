@@ -16,5 +16,7 @@ public class UserController {
         for (User elem : users) {
             System.out.println(elem);
         }
+
+        System.out.println("All user printed");
     }
 }
