@@ -6,9 +6,11 @@ import networks.model.User;
 import networks.service.UserService;
 import networks.service.email.HappyBirthDayBuilder;
 import networks.service.email.MassengeBuilder;
+import networks.service.impl.UserServiceImpl;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -18,30 +20,24 @@ public class UserController {
 
     public static void main(String[] args) {
 
-        final UserService userService = new UserService();
-        final List<User> users = userService.getAll();
-
-        for (User elem : users) {
-            System.out.println(elem);
-        }
-
-        System.out.println("All user printed");
-
+       UserService userService = new UserServiceImpl();
         User user = new User();
         user.setName("Andrii");
+        user.setEmail("andrii.kolesov@gmail.com");
+        user.setBirthday(LocalDate.now().plusDays(1));
 
-        MassengeBuilder massengeBuilder = new HappyBirthDayBuilder();
+        LocalDate now = LocalDate.now();
+        LocalDate tomorrow = LocalDate.now().plusDays(1);
 
-        final String build = massengeBuilder.build(user);
+        userService.happyBirthday(user);
 
-        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-        simpleMailMessage.setTo("andrii.kolesov@gmail.com");
-        simpleMailMessage.setSubject("MiracleIT");
-        simpleMailMessage.setText(build);
+//        User first = userService.getAll().get(0);
 
-        final JavaMailSenderImpl javaMailSender = EmailConfig.mailSender();
-        javaMailSender.send(simpleMailMessage);
+//        String newPassword = "qwerty123456";
 
+//        userService.changePassword(first, newPassword);
+
+//        System.out.println(first);
     }
 }
 

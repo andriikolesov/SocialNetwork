@@ -8,16 +8,10 @@ import java.util.List;
 /**
  * @author Igor Hnes on 06.12.17.
  */
-public class PostService {
+public interface PostService {
 
-    public List<Post> getAll() {
-        final PostDao postDao = new PostDao();
-        return postDao.getAll();
-    }
+    List<Post> getAll();
 
-    public List<Post> getByTitle(String title){
-        PostDao postDao = new PostDao();
-        return postDao.getByTitle(title);
-    }
+    List<Post> getByTitle(String title);
 
 }

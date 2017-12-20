@@ -12,25 +12,10 @@ import java.util.List;
 /**
  * @author Igor Hnes on 06.12.17.
  */
-public class PostDao {
+public interface PostDao {
 
 
-    public List<Post> getAll() {
-        return Database.getAllPosts();
-    }
+    List<Post> getAll();
 
-    public List<Post> getByTitle (String title){
-        List<Post> posts = getAll();
-        List<Post> postsByTitle = new LinkedList<>();
-        for (Post elem : posts){
-            if (title.equals(elem.getTitle())){
-                postsByTitle.add(elem);
-            }
-        }
-
-        if (postsByTitle.size() == 0) {
-            throw new NoFoundPostExeption();
-        }
-        return postsByTitle;
-    }
+    List<Post> getByTitle(String title);
 }

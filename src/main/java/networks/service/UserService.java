@@ -15,4 +15,11 @@ public interface UserService {
     List<User> getByName(String name);
 
     List<User> getByAge(int age);
-}
+
+    void changePassword(User user, String newPassword);
+
+    void happyBirthday(User user);
+
+    }
+
+

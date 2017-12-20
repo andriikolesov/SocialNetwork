@@ -1,6 +1,7 @@
 package networks.controller;
 import networks.model.Post;
 import networks.service.PostService;
+import networks.service.impl.PostServiceImpl;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
 public class PostController {
 
     public static void main(String[] args) {
-        final PostService postService = new PostService();
+        final PostService postService = new PostServiceImpl();
         final List<Post> posts = postService.getAll();
         final List<Post> posts1 = postService.getByTitle("Hello");
 
@@ -22,7 +23,7 @@ public class PostController {
         for (Post elem : posts1){
             System.out.println(elem);
         }
-        System.out.println("11");
+        System.out.println("All titles printed");
 
         }
     }

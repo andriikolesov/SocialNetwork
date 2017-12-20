@@ -10,36 +10,19 @@ import java.util.List;
 /**
  * @author Igor Hnes on 06.12.17.
  */
-public class UserDao {
+public interface UserDao {
+    /**
+     *
+     * @return get all users
+     */
+    List<User> getAll();
 
-    public List<User> getAll() {
-        return Database.getAllUsers();
+    /**
+     *
+     * @return get by name
+     */
 
-    }
+    List<User> getByName(String name);
 
-    public List<User> getByName (String name){
-        List<User> users = getAll();
-        List<User> usersByName = new LinkedList<>();
-        for (User elem : users){
-            if (name.equals(elem.getName())){
-                usersByName.add(elem);
-            }
-        }
-
-        if (usersByName.size() == 0) {
-            throw new NoFoundUserExeption();
-        }
-        return usersByName;
-    }
-
-    public List<User> getByAge (int age){
-        List<User> users = getAll();
-        List<User> usersByAge = new LinkedList<>();
-        for (User elem : users) {
-            if (elem.getAge() == age){
-                usersByAge.add(elem);
-            }
-        }
-        return usersByAge;
-    }
+    List<User> getByAge(int age);
 }
