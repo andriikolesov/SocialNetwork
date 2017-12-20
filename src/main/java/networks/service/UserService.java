@@ -3,13 +3,16 @@ package networks.service;
 import networks.dao.UserDao;
 import networks.model.User;
 
+import java.util.List;
+
 /**
  * @author Igor Hnes on 06.12.17.
  */
-public class UserService {
+public interface UserService {
 
-    public User[] getAll() {
-        final UserDao userDao = new UserDao();
-        return userDao.getAll();
-    }
+    List<User> getAll();
+
+    List<User> getByName(String name);
+
+    List<User> getByAge(int age);
 }

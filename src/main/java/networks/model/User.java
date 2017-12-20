@@ -11,15 +11,15 @@ public class User {
     private int age;
     private String status;
 
+    public User() {
+    }
+
     public User(String email, String password, String name, int age, String status) {
         this.email = email;
         this.password = password;
         this.name = name;
         this.age = age;
         this.status = status;
-    }
-
-    public User() {
     }
 
     public String getName() {
