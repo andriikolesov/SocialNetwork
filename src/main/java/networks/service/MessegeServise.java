@@ -5,5 +5,5 @@ package networks.service;
  */
 public interface MessegeServise {
 
-    void sendMassege(String text, String to);
+    void sendMessege(String text, String to);
 }

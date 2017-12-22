@@ -5,7 +5,7 @@ import networks.model.User;
 /**
  * @author Igor Hnes on 20.12.17.
  */
-public class HappyBirthDayBuilder implements MassengeBuilder {
+public class HappyBirthDayBuilder implements MessegeBuilder {
     @Override
     public String build(User user) {
         return "Dear "

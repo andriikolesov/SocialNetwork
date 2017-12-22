@@ -11,7 +11,7 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
  */
 public class MessegeServiseImpl implements MessegeServise {
     @Override
-    public void sendMassege(String text, String to) {
+    public void sendMessege(String text, String to) {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setTo(to);
         simpleMailMessage.setSubject(new RecoverPasswordBuilder().getSUBJECT());

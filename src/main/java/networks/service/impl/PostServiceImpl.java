@@ -1,6 +1,7 @@
 package networks.service.impl;
 
 import networks.dao.PostDao;
+import networks.dao.factory.DaoFactory;
 import networks.dao.impl.PostDaoImpl;
 import networks.model.Post;
 import networks.service.PostService;
@@ -14,13 +15,13 @@ public class PostServiceImpl implements PostService{
 
     @Override
     public List<Post> getAll() {
-        final PostDao postDao = new PostDaoImpl();
+        final PostDao postDao = DaoFactory.getPostDao();
         return postDao.getAll();
     }
 
     @Override
     public List<Post> getByTitle(String title) {
-        PostDao postDao = new PostDaoImpl();
+        PostDao postDao = DaoFactory.getPostDao();
         return postDao.getByTitle(title);
     }
 }

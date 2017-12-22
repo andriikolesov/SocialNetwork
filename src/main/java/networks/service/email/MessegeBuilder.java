@@ -5,7 +5,7 @@ import networks.model.User;
 /**
  * @author Igor Hnes on 20.12.17.
  */
-public interface MassengeBuilder {
+public interface MessegeBuilder {
 
     String build(User user);
 }

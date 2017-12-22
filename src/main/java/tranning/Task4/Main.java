@@ -1,4 +1,4 @@
-package tranning;
+package tranning.Task4;
 
 /**
  * @author Igor Hnes on 06.12.17.

@@ -1,12 +1,11 @@
 package networks.service.impl;
 
 import networks.dao.UserDao;
-import networks.dao.impl.UserDaoImpl;
+import networks.dao.factory.DaoFactory;
 import networks.model.User;
 import networks.service.MessegeServise;
 import networks.service.UserService;
 import networks.service.email.HappyBirthDayBuilder;
-import networks.service.email.MassengeBuilder;
 import networks.service.email.RecoverPasswordBuilder;
 
 import java.time.LocalDate;
@@ -18,30 +17,36 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Override
+    public List<User> create(User user) {           //list?
+        UserDao userDao = DaoFactory.getUserDao();
+        return userDao.getAll();
+    }
+
+    @Override
     public List<User> getAll() {
-        final UserDao userDao = new UserDaoImpl();
+        final UserDao userDao = DaoFactory.getUserDao();
         return userDao.getAll();
     }
 
     @Override
     public List<User> getByName(String name) {
-        UserDao  userDao = new UserDaoImpl();
+        UserDao  userDao = DaoFactory.getUserDao();
         return userDao.getByName(name);
     }
 
     @Override
     public List<User> getByAge(int age) {
-        UserDao userDao = new UserDaoImpl();
+        UserDao userDao = DaoFactory.getUserDao();
         return userDao.getByAge(age);
     }
 
     @Override
     public void changePassword(User user, String newPassword) {
         user.setPassword(newPassword);
-        MassengeBuilder builder = new RecoverPasswordBuilder();
+        RecoverPasswordBuilder builder = new RecoverPasswordBuilder();
         String message = builder.build(user);
         MessegeServise messegeServise = new MessegeServiseImpl();
-        messegeServise.sendMassege(message, user.getEmail());
+        messegeServise.sendMessege(message, user.getEmail());
 
     }
 
@@ -49,10 +54,10 @@ public class UserServiceImpl implements UserService {
     public void happyBirthday(User user) {
         if (user.getBirthday().equals(LocalDate.now())) {
 
-            MassengeBuilder builder = new HappyBirthDayBuilder();
+            HappyBirthDayBuilder builder = new HappyBirthDayBuilder();
             String message = builder.build(user);
             MessegeServise messegeServise = new MessegeServiseImpl();
-            messegeServise.sendMassege(message, user.getEmail());
+            messegeServise.sendMessege(message, user.getEmail());
         } else {
             System.out.println("sorry, but b-day not today");
         }
