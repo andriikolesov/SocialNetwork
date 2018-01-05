@@ -1,8 +1,5 @@
 package tranning.io;
 
-/**
- * @author Igor Hnes on 08.12.17.
- */
 public class Example {
 
     private int age = 20;

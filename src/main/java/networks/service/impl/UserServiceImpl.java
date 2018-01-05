@@ -16,11 +16,12 @@ import java.util.List;
  */
 public class UserServiceImpl implements UserService {
 
+
+
     @Override
-    public List<User> create(User user) {           //list?
+    public void create(User user) {
         UserDao userDao = DaoFactory.getUserDao();
-        return userDao.getAll();
-    }
+            }
 
     @Override
     public List<User> getAll() {

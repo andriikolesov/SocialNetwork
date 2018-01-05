@@ -9,8 +9,7 @@ import java.util.List;
  */
 public interface UserService {
 
-    List<User> create (User user);
-
+    public void create (User user);
 
     List<User> getAll();
 

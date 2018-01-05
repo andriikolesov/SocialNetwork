@@ -6,9 +6,6 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.StringJoiner;
 
-/**
- * @author Igor Hnes on 08.12.17.
- */
 public class Read {
 
     public static void main(String[] args) throws IOException {
