@@ -3,7 +3,7 @@ package networks.service.impl;
 import networks.dao.UserDao;
 import networks.dao.factory.DaoFactory;
 import networks.model.User;
-import networks.service.MessegeServise;
+import networks.service.MessegeService;
 import networks.service.UserService;
 import networks.service.email.HappyBirthDayBuilder;
 import networks.service.email.RecoverPasswordBuilder;
@@ -17,6 +17,10 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
 
+    @Override
+    public void update(User entity) {
+
+    }
 
     @Override
     public void create(User user) {
@@ -24,9 +28,14 @@ public class UserServiceImpl implements UserService {
             }
 
     @Override
-    public List<User> getAll() {
+    public void delete(Long aLong) {
+
+    }
+
+    @Override
+    public List<User> findAll() {
         final UserDao userDao = DaoFactory.getUserDao();
-        return userDao.getAll();
+        return userDao.findAll();
     }
 
     @Override
@@ -46,7 +55,7 @@ public class UserServiceImpl implements UserService {
         user.setPassword(newPassword);
         RecoverPasswordBuilder builder = new RecoverPasswordBuilder();
         String message = builder.build(user);
-        MessegeServise messegeServise = new MessegeServiseImpl();
+        MessegeService messegeServise = new MessegeServiceImpl();
         messegeServise.sendMessege(message, user.getEmail());
 
     }
@@ -57,7 +66,7 @@ public class UserServiceImpl implements UserService {
 
             HappyBirthDayBuilder builder = new HappyBirthDayBuilder();
             String message = builder.build(user);
-            MessegeServise messegeServise = new MessegeServiseImpl();
+            MessegeService messegeServise = new MessegeServiceImpl();
             messegeServise.sendMessege(message, user.getEmail());
         } else {
             System.out.println("sorry, but b-day not today");

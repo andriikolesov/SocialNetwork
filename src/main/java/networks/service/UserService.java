@@ -7,11 +7,7 @@ import java.util.List;
 /**
  * @author Igor Hnes on 06.12.17.
  */
-public interface UserService {
-
-    public void create (User user);
-
-    List<User> getAll();
+public interface UserService extends CrudService <User, Long>{
 
     List<User> getByName(String name);
 

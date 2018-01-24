@@ -11,15 +11,32 @@ import java.util.List;
 /**
  * @author Igor Hnes on 20.12.17.
  */
-public class UserDaoImpl implements UserDao{
+public class UserDaoImpl implements UserDao {
+
     @Override
-    public List<User> getAll() {
-        return Database.getAllUsers();
+    public void update(User entity) {
+
     }
 
     @Override
+    public void create(User entity) {
+
+    }
+
+    @Override
+    public void delete(Long aLong) {
+
+    }
+
+    @Override
+    public List<User> findAll() {
+        return Database.getAllUsers();
+    }
+
+
+    @Override
     public List<User> getByName(String name) {
-        List<User> users = getAll();
+        List<User> users = findAll();
         List<User> usersByName = new LinkedList<>();
         for (User elem : users){
             if (name.equals(elem.getName())){
@@ -36,7 +53,7 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public List<User> getByAge(int age) {
-        List<User> users = getAll();
+        List<User> users = findAll();
         List<User> usersByAge = new LinkedList<>();
         for (User elem : users) {
             if (elem.getAge() == age){

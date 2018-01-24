@@ -7,9 +7,7 @@ import java.util.List;
 /**
  * @author Igor Hnes on 06.12.17.
  */
-public interface UserDao {
-
-    List<User> getAll();
+public interface UserDao extends CrudDao<User, Long>{
 
     List<User> getByName(String name);
 
