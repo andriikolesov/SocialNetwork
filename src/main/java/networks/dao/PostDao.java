@@ -5,7 +5,6 @@ import networks.exeption.NoFoundPostExeption;
 import networks.exeption.NoFoundUserExeption;
 import networks.model.Post;
 import networks.model.User;
-
 import java.util.LinkedList;
 import java.util.List;
 
