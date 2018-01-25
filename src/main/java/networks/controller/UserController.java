@@ -4,12 +4,8 @@ import networks.model.User;
 import networks.service.UserService;
 import networks.service.factory.ServiceFactory;
 import networks.service.impl.UserServiceImpl;
-
 import java.time.LocalDate;
 
-/**
- * @author Igor Hnes on 06.12.17.
- */
 public class UserController {
 
     public static void main(String[] args) {
@@ -34,6 +30,3 @@ public class UserController {
 //        System.out.println(first);
     }
 }
-
-
-
