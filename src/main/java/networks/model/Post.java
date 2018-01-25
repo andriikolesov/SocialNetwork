@@ -1,8 +1,5 @@
 package networks.model;
 
-/**
- * @author Igor Hnes on 06.12.17.
- */
 public class Post {
 
     private String title;
