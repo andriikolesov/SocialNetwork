@@ -1,13 +1,9 @@
 package networks.model;
 
-/**
- * @author Igor Hnes on 06.12.17.
- */
 public class Group {
 
     private String name;
     private String body;
-
 
     @Override
     public String toString() {
@@ -34,7 +30,6 @@ public class Group {
     }
 
     public Group() {
-
     }
 
     public Group(String name, String body) {
