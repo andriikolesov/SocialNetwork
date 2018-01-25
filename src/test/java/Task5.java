@@ -3,9 +3,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author Igor Hnes on 13.12.17.
- */
 public class Task5 {
 
     public static void main(String[] args) {
@@ -49,7 +46,6 @@ public class Task5 {
         List<String> listStr = new LinkedList<>();
         List<Integer> listInt = new LinkedList<>();
 
-
         for (Object elem : map.keySet()) {
             if (elem instanceof String){
                 listStr.add((String) elem);
@@ -60,9 +56,4 @@ public class Task5 {
         System.out.println(listInt);
         System.out.println(listStr);
     }
-
-    public static void task2() {
-
-    }
-
 }
