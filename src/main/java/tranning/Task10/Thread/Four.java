@@ -8,8 +8,6 @@ public class Four {
         thread1.start();
         thread1.join(300);
         thread2.start();
-
-
     }
 
     public static class ThreadClass implements Runnable {
@@ -35,5 +33,3 @@ public class Four {
         }
     }
 }
-
-
