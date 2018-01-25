@@ -7,9 +7,6 @@ import networks.service.impl.GroupServiceImpl;
 import networks.service.impl.PostServiceImpl;
 import networks.service.impl.UserServiceImpl;
 
-/**
- * @author Igor Hnes on 22.12.17.
- */
 public class ServiceFactory {
 
     public static UserService getUserService(){
@@ -23,6 +20,4 @@ public class ServiceFactory {
     public static GroupService getGroupService(){
         return new GroupServiceImpl();
     }
-
 }
-
