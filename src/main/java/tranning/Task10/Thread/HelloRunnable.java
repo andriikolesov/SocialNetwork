@@ -2,7 +2,6 @@ package tranning.Task10.Thread;
 
 public class HelloRunnable implements Runnable {
 
-
     public void run(){
         System.out.println("Hello from a thread!");
     }
@@ -11,7 +10,6 @@ public class HelloRunnable implements Runnable {
         @Override
         public void run(){
             System.out.println("hello thread");
-
         }
     }
 }
