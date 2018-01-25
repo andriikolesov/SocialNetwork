@@ -40,7 +40,6 @@ public class Read {
 
     private static void read() throws IOException {
 
-
         String text = "(((A";
         String replaced =
                 text.replace("(", ")");
@@ -75,8 +74,7 @@ public class Read {
 
     private static void join() {
 
-        final StringJoiner joiner
-                = new StringJoiner(" hahaha ");
+        final StringJoiner joiner = new StringJoiner(" hahaha ");
 
         joiner.add("Hello");
         joiner.add("Hello");
