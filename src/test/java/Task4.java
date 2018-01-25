@@ -1,8 +1,5 @@
 import java.util.*;
 
-/**
- * @author Igor Hnes on 13.12.17.
- */
 public class Task4 {
 
     public static void main(String[] args) {
