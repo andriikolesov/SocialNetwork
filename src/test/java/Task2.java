@@ -2,9 +2,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @author Igor Hnes on 13.12.17.
- */
 public class Task2 {
 
     public static void main(String[] args) {
