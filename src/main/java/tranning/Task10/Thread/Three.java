@@ -9,7 +9,6 @@ public class Three {
         final Thread thread2 = new Thread(new ThreadTwo());
         thread2.start();
         int[]mass = new int[100];
-
     }
 
     public static class ThreadOne implements Runnable{
