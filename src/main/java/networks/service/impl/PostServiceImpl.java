@@ -6,27 +6,20 @@ import networks.dao.impl.PostDaoImpl;
 import networks.model.AbstractEntity;
 import networks.model.Post;
 import networks.service.PostService;
-
 import java.util.List;
 
-/**
- * @author Igor Hnes on 20.12.17.
- */
 public class PostServiceImpl implements PostService{
 
     @Override
     public void update(AbstractEntity entity) {
-
     }
 
     @Override
     public void create(AbstractEntity entity) {
-
     }
 
     @Override
     public void delete(Object o) {
-
     }
 
     @Override
