@@ -7,29 +7,23 @@ import networks.service.MessegeService;
 import networks.service.UserService;
 import networks.service.email.HappyBirthDayBuilder;
 import networks.service.email.RecoverPasswordBuilder;
-
 import java.time.LocalDate;
 import java.util.List;
 
-/**
- * @author Igor Hnes on 20.12.17.
- */
 public class UserServiceImpl implements UserService {
 
 
     @Override
     public void update(User entity) {
-
     }
 
     @Override
     public void create(User user) {
         UserDao userDao = DaoFactory.getUserDao();
-            }
+    }
 
     @Override
     public void delete(Long aLong) {
-
     }
 
     @Override
@@ -71,7 +65,5 @@ public class UserServiceImpl implements UserService {
         } else {
             System.out.println("sorry, but b-day not today");
         }
-
     }
-
 }
