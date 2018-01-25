@@ -12,7 +12,6 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
-
     @Override
     public void update(User entity) {
     }
@@ -51,7 +50,6 @@ public class UserServiceImpl implements UserService {
         String message = builder.build(user);
         MessegeService messegeServise = new MessegeServiceImpl();
         messegeServise.sendMessege(message, user.getEmail());
-
     }
 
     @Override
