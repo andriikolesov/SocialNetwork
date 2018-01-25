@@ -6,12 +6,8 @@ import networks.service.MessegeService;
 import networks.service.email.RecoverPasswordBuilder;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-
 import java.util.List;
 
-/**
- * @author Igor Hnes on 20.12.17.
- */
 public class MessegeServiceImpl implements MessegeService {
     @Override
     public void sendMessege(String text, String to) {
@@ -22,23 +18,18 @@ public class MessegeServiceImpl implements MessegeService {
 
         final JavaMailSenderImpl javaMailSender = EmailConfig.mailSender();
         javaMailSender.send(simpleMailMessage);
-
-
     }
 
     @Override
     public void update(AbstractEntity entity) {
-
     }
 
     @Override
     public void create(AbstractEntity entity) {
-
     }
 
     @Override
     public void delete(Object o) {
-
     }
 
     @Override
