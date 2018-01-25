@@ -26,33 +26,27 @@ public class Viktim extends Mac {
     }
 
     private Viktim(String name) {
-
         this.name = name;
     }
 
-    public Viktim() { //
+    public Viktim() { 
     }
 
     private Viktim(String name, int age) {
-
         this.name = name;
         this.age = age;
     }
 
     private void some(){
-
     }
 
     private void  someone(){
-
     }
 
     private void getMyName(){
-
     }
 
     private int integer(){
         return 0;
-
     }
 }
