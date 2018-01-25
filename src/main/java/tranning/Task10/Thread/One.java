@@ -1,8 +1,5 @@
 package tranning.Task10.Thread;
 
-/**
- * @author Igor Hnes on 12.01.18.
- */
 public class One {
 
     public static void main(String[] args) {
@@ -22,9 +19,6 @@ public class One {
         public void run() {
             for (int i = 0; i < 15; i++) {
                 System.out.println(Thread.currentThread().getName() + " " + i);
-
-
-
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
