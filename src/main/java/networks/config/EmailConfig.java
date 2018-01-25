@@ -2,9 +2,6 @@ package networks.config;
 
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
-/**
- * @author Igor Hnes on 20.12.17.
- */
 public class EmailConfig {
 
     private static final Integer PORT = 587;
