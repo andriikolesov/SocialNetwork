@@ -2,13 +2,9 @@ package networks.data;
 
 import networks.model.Post;
 import networks.model.User;
-
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * @author Igor Hnes on 06.12.17.
- */
 public class Database {
 
     public static List<User> getAllUsers() {
@@ -24,7 +20,6 @@ public class Database {
 
         return list;
    }
-
 
     public static List<Post> getAllPosts() {
         List<Post> list = new LinkedList<>();
@@ -42,6 +37,4 @@ public class Database {
 
         return list;
     }
-
-
 }
