@@ -40,7 +40,6 @@ public class Two {
                     return;
                 }
             }
-
         }
     }
 
@@ -57,7 +56,6 @@ public class Two {
                     return;
                 }
             }
-
         }
     }
 }
