@@ -10,15 +10,6 @@ public class Main {
         Car car = select(MAZDA);
         car.drive();
 
-//        System.out.println(Beer.CHERNIGIVSKE);
-//        System.out.println(Beer.LVIVSKE);
-//        System.out.println(Beer.OBOLON);
-//        System.out.println(Beer.PPB);
-//        System.out.println(Beer.ROGAN);
-
-//        Institute institute = new KNU();
-//        institute.study();
-
     }
 
     private static Car select(CarType carType) {
