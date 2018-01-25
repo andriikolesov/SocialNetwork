@@ -6,7 +6,8 @@ import java.lang.reflect.Method;
 
 public class Main {
 
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    public static void main(String[] args) throws NoSuchFieldException, 
+    IllegalAccessException, NoSuchMethodException, InvocationTargetException {
 
         Viktim viktim = new Viktim();
         final Class<? extends Viktim> clazz = viktim.getClass();
@@ -34,6 +35,4 @@ public class Main {
         }
         System.out.println(string);
     }
-
-
 }
