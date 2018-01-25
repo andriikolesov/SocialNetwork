@@ -1,6 +1,5 @@
 package tranning.Task7;
 
-
 public class SetSome {
 
     public static void main(String[] args) {
@@ -11,5 +10,4 @@ public class SetSome {
 
         System.out.println(user);
     }
-
 }
