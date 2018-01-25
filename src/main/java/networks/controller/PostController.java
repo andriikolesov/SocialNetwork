@@ -3,13 +3,9 @@ import networks.model.Post;
 import networks.service.PostService;
 import networks.service.factory.ServiceFactory;
 import networks.service.impl.PostServiceImpl;
-
 import javax.xml.ws.Service;
 import java.util.List;
 
-/**
- * @author Igor Hnes on 06.12.17.
- */
 public class PostController {
 
     public static void main(String[] args) {
@@ -26,10 +22,5 @@ public class PostController {
             System.out.println(elem);
         }
         System.out.println("All titles printed");
-
         }
     }
-
-
-
-
