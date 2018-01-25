@@ -2,9 +2,6 @@ package networks.model;
 
 import java.time.LocalDate;
 
-/**
- * @author Igor Hnes on 06.12.17.
- */
 public class User extends AbstractEntity {
 
     private String name;
