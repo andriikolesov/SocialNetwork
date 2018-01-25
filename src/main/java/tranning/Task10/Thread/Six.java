@@ -23,7 +23,6 @@ public class Six {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public static class ThreadWrite implements Runnable{
@@ -33,16 +32,13 @@ public class Six {
                 if(i%2==0){
                     final String s = Thread.currentThread().getName() + " " + i;
                 }
-
             }
-
         }
     }
 
     public static class ThreadRead implements Runnable{
         @Override
         public void run() {
-
         }
     }
 }
