@@ -4,5 +4,4 @@ public enum  CarType {
     HONDA,
     MAZDA,
     TOYOTA,
-
 }
