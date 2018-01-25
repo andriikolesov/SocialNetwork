@@ -1,9 +1,5 @@
-/**
- * @author Igor Hnes on 15.12.17.
- */
+
 public class Task7 {
-
-
 
     public static void main(String[] args)  {
 
@@ -43,6 +39,5 @@ public class Task7 {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
