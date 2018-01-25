@@ -12,17 +12,14 @@ public class StaropramenServiceImpl implements StaropramenService {
 
     @Override
     public void save(Staropramen entity) {
-
     }
 
     @Override
     public void update(Staropramen entity) {
-
     }
 
     @Override
     public void delete(Integer id) {
-
     }
 
     @Override
